@@ -125,7 +125,7 @@ void PROCESS_HINT(void){
     //兩邊準備
     HO_TABLE = WRITE_HO_TABLE();
     HINT_OUTPUT(HO_TABLE);
-     delay(80000);//
+     delay(160000);//
     return;
 }
 
@@ -142,7 +142,7 @@ void PROCESS_ONE(void){
         PIE1bits.ADIE = 0;
         TTT_OUTPUT(TTTO_TABLE); // include 顯示winner
     }
-      delay(80000);//
+      delay(160000);//
     return;
 
 }
@@ -162,10 +162,10 @@ void PROCESS_THREE(void){
     T2CONbits.TMR2ON = 0;
     REACTO_TABLE = REACTION_UPDATE(REACTO_TABLE); //include
     REACTION_OUTPUT(REACTO_TABLE);//過程
-      delay(80000);//
+      delay(160000);//
     REACTO_TABLE = REACTION_UPDATE_WHO_WIN(REACTO_TABLE);
     REACTION_OUTPUT(REACTO_TABLE);//顯示誰結束
-       delay(80000);//
+       delay(160000);//
     return;
 }
 
@@ -191,10 +191,10 @@ void PROCESS_FIVE(void){
     T2CONbits.TMR2ON = 0;
     WAWO_TABLE = WHAC_A_MOLE_UPDATE(WAWO_TABLE);
     WHAC_A_MOLE_OUTPUT(WAWO_TABLE);
-     delay(80000);//
+     delay(160000);//
     WAWO_TABLE = WHAC_A_MOLE_UPDATE_WHO_WIN(WAWO_TABLE);
     WHAC_A_MOLE_OUTPUT(WAWO_TABLE);
-     delay(80000);//
+     delay(160000);//
     return;
 }
 
@@ -447,3 +447,4 @@ void __interrupt(low_priority) Lo_ISR(void)
     }
    
 }
+
